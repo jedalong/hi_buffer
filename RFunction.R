@@ -43,7 +43,7 @@ rFunction = function(data, r, key, value, geom, poly2line, crs_code) {
   
   
   #Buffer type Table
-  x_tab <- table(move_x@trackId, move_x$buf_code)
+  x_tab <- table(trackId(move_x), move_x$buf_code)
   csvName <- paste0('Table_BufferMovementType_r_',r,'.csv')
   write.csv(x_tab,appArtifactPath(csvName),row.names=TRUE)
   
