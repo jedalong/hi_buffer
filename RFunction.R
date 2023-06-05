@@ -15,12 +15,13 @@ library('wildlifeHI')
 
 rFunction = function(data, r, key, value, geom, poly2line, crs_code) {
   
+  tz <- attr(timestamps(data),'tzone')
   #check input data type
-  if (class(data) != 'MoveStack'){
-    if (class(data) == 'Move'){
-      data <- moveStack(data, forceTz='UTC')
+  if (!inherits(data,'MoveStack')){
+    if (inherits(data,'Move')){
+      move <- moveStack(move, forceTz=tz) #fix this timestamp to correct time zone
     } else {
-      print('Input Data not of class MoveStack. Returning null object.')
+      print('Input Data not of class MoveStack. Returning NULL.')
       return(NULL)
     }
   }
