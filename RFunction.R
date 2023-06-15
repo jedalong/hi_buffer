@@ -1,12 +1,10 @@
 library('move')
 library('sf')
 library('osmdata')
-library('devtools')
 library('ggplot2')
 library('units')
 library('mapview')
-devtools::install_github('jedalong/wildlifeHI')
-library('wildlifeHI')
+library('wildlifeHI') #github('jedalong/wildlifeHI')
 
 ## The parameter "data" is reserved for the data object passed on from the previous app
 
