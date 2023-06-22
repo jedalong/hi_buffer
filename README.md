@@ -39,7 +39,6 @@ MoveStack in Movebank format with one additional columns, named buf_code, with t
 `Table_BufferMovementType_r_*.csv`: A csv file with a table of the number of movement events associated with each buffer movement type (see above) per individual. 
 `Shapfile_buffer_r_*.shp`: A shapefile with the buffer of the OSM data with distance r (also has .shx,.dbf.prj files)
 `Shapfile_trajectory_r_*.shp`: A shapefile with the movement segments stored as lines (also has .shx,.dbf.prj files)
-`Map_Buffer_r_*.html`: An interactive map widget of the OSM feature buffer and movement trajectory lines derived from R package mapview. Includes a corresponding data folder.
 
 ### Settings 
 

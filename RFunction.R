@@ -4,7 +4,6 @@ library('osmdata')
 library('devtools')
 library('ggplot2')
 library('units')
-library('mapview')
 #devtools::install_github('jedalong/wildlifeHI')
 library('wildlifeHI')
 
@@ -57,9 +56,9 @@ rFunction = function(data, r, key, value, geom, poly2line, crs_code) {
   suppressWarnings(st_write(sf_x,appArtifactPath(shpName)))
   
   #Buffer Map
-  m <- mapview(buf_x) + mapview(sf_x['buf_code'])
-  htmlName <- paste0('Map_Buffer_r_',r,'.html')
-  mapshot(m,url=appArtifactPath(htmlName))
+  #m <- mapview(buf_x) + mapview(sf_x['buf_code'])
+  #htmlName <- paste0('Map_Buffer_r_',r,'.html')
+  #mapshot(m,url=appArtifactPath(htmlName))
   
   #return move
   return(move_x)
